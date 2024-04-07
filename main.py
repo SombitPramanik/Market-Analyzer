@@ -61,4 +61,4 @@ def FetchGraph():
     
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False,port=7895,host="192.168.100.45")
