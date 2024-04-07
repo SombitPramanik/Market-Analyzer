@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    flex-wrap: wrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: #23242a;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    margin-top: 0.3em;
+    height: 7%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.TopMenuItem {
+    text-transform: capitalize;
+    text-align: center;
+    height: 80%;
+    width: 30%;
+    border-radius: 10px;
+    background: #2a2f3b;
+    color: #fff;
+}
+
+main {
+    height: 90%;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.GraphContainer {
+    margin-top: 1em;
+    width: 85%;
+    height: 95%;
+    border: 2px dashed green;
+    border-radius: 10px;
+}
+
+.SideMenu {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.SideMenuItem {
+    border: 1.5px dashed blue;
+    width: 100%;
+    height: 65px;
+    border-radius: 10px;
+
+}
+
+.SMI4 {
+    height: 350px;
+    border-radius: 10px;
+    border: 1.5px dashed blue;
+    width: 100%;
+}
+
+/* Top Menu CSS */
+.select {
+    background: #2a2f3b;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0.5em;
+    border: 2px #2a2f3b solid;
+    transition: background 0.3s;
+    cursor: pointer;
+    padding: 0.7em;
+}
+
+.select:hover {
+    background: #323741;
+
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+
+.caretRotate {
+    transform: rotate(180deg);
+
+}
+
+.DropDownMenu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px solid #363a43;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: #9fa5bf;
+    position: relative;
+    top: 1em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.DropDownMenu li {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.DropDownMenu li:hover {
+    background: #2a2d35;
+}
+
+.active {
+    background: #23242a;
+}
+
+.DropDownMenuOpen {
+    display: block;
+    opacity: 1;
+    max-height: 75vh;
+    overflow: scroll;
+}
+
+/* Side Menu Bar */
+.SideMenuItem,.SMI4{
+    cursor: pointer;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px solid #363a43;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: #9fa5bf;
+}
+#plotGraph {
+    /* width: 100%;
+    margin: 0.5em;
+    /* border: 2px dashed green; */
+    /* border-radius: 10px; */
+}

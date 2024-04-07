@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Index</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <div class="TopMenuItem DropDownItem TMI2">
+            <div class="DropDown">
+                <div class="select">
+                    <span class="selected">select rule</span>
+                    <div class="caret"></div>
+                </div>
+                <ul id="RuleDropDown" class="DropDownMenu">
+                    <li class="active">select rule</li>
+                    <li value="GCS">Golden Crossover Signal</li>
+                    <li value="RNR">request new rule</li>
+                </ul>
+            </div>
+        </div>
+        <div class="TopMenuItem DropDownItem TMI3">
+            <div class="DropDown">
+                <div class="select">
+                    <span class="selected">select time intervale</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="DropDownMenu">
+                    <li class="active">select time intervale</li>
+                    <li value="7">last weak</li>
+                    <li value="14">last 2 weak</li>
+                    <li value="21">last 3 weak</li>
+                    <li value="90">last 90 days</li>
+                    <li value="180">last 180 days</li>
+                    <li value="360">last 360 days</li>
+                    <li value="lt">life time</li>
+                </ul>
+            </div>
+        </div>
+        <div class="TopMenuItem DropDownItem TMI1">
+            <div class="DropDown">
+                <div class="select">
+                    <span class="selected">chose stock</span>
+                    <div class="caret"></div>
+                </div>
+                <ul id="SelectStockList" class="DropDownMenu">
+                    <li WhoAreYOU="iamStockValue" value="Default" class="active">chose stock</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="GraphContainer">
+            <img id="plotGraph" src="" alt="Plot">
+        </div>
+        <div class="SideMenu">
+            <div class="SideMenuItem OnHoverItem SMI1">add new stock to list</div>
+            <div class="SideMenuItem OnHoverItem SMI1">remove a stock from list</div>
+            <div class="SideMenuItem OnHoverItem SMI2">create alert</div>
+            <div class="SideMenuItem OnHoverItem SMI3">open trading platform</div>
+            <div class="SMI4">insights</div>
+        </div>
+    </main>
+    <script src="static/script.js"></script>
+</body>
+</html>
