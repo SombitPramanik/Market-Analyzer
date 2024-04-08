@@ -7,9 +7,9 @@ def isGCS(StockDataDirectory, StockName, TimeDelta):
     if Data.empty:
         return False
     
-    Data['20_SMA'] = Data.Close.rolling(window=20, min_periods=1).mean()
-    Data['50_SMA'] = Data.Close.rolling(window=50, min_periods=1).mean()
+    Data['24_SMA'] = Data.Close.rolling(window=24, min_periods=1).mean()
+    Data['55_SMA'] = Data.Close.rolling(window=55, min_periods=1).mean()
     
     delta_index = Data.index[-1] - pd.Timedelta(days=TimeDelta)
-    isGCSPossible = any((Data['20_SMA'].shift(1) < Data['50_SMA'].shift(1)) & (Data['20_SMA'] > Data['50_SMA']) & (Data.index >= delta_index))
+    isGCSPossible = any((Data['24_SMA'].shift(1) < Data['55_SMA'].shift(1)) & (Data['24_SMA'] > Data['55_SMA']) & (Data.index >= delta_index))
     return isGCSPossible
